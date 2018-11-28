@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 // Include the Main Component
-import Main from './Components/Main';
+import Main from './components/Main';
 
 // Include Custom Style
 import './src/style/style.sass'
