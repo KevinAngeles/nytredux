@@ -1,8 +1,9 @@
 # New York Times Redux Search
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 This application allows users to search for articles from the New York Times and save the links into a data base so users can read those articles later.
 
-This project is the Redux implementation of [New York Times React app](https://github.com/KevinAngeles/nytreact)
+This project is the Redux implementation of my previous project [New York Times React app](https://github.com/KevinAngeles/nytreact)
 
 ## DEMO
 

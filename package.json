@@ -1,6 +1,6 @@
 {
 	"name": "nytredux",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "This application allows users to search for articles from the New York Times and save the links into a data base so users can read those articles later.",
 	"main": "server.js",
 	"scripts": {
