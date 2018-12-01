@@ -3,6 +3,7 @@ import React,{ Component } from 'react';
 import { connect } from 'react-redux';
 import { normalizeDate } from '../../utils';
 import { fetchSavedArticles, removeSavedArticle } from '../../actions/saved';
+import PropTypes from 'prop-types';
 
 class Saved extends Component {
   constructor(props) {
@@ -42,6 +43,18 @@ class Saved extends Component {
 		  </div>
   	);
   }
+};
+
+Saved.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    snippet: PropTypes.string.isRequired,
+    alreadySaved: PropTypes.bool.isRequired,
+    web_url: PropTypes.string.isRequired
+  })),
+  savedArticles: PropTypes.array.isRequired,
+  fetchSavedArticles: PropTypes.func.isRequired,
+  removeSavedArticle: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

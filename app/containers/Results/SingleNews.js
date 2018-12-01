@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { saveArticle } from '../../actions/results';
+import PropTypes from 'prop-types';
 
 class SingleNews extends Component {
   constructor(props) {
@@ -23,6 +24,17 @@ class SingleNews extends Component {
       </li>
     )
   }
+}
+
+SingleNews.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    snippet: PropTypes.string.isRequired,
+    alreadySaved: PropTypes.bool.isRequired,
+    web_url: PropTypes.string.isRequired
+  })),
+  savedArticles: PropTypes.array.isRequired,
+  saveArticle: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({

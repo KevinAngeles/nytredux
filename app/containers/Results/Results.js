@@ -1,8 +1,8 @@
 // Include React
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import  SingleNews  from './SingleNews';
+import PropTypes from 'prop-types';
 
 let Results = ({ articles, loading }) => {
   let results = "";
@@ -33,6 +33,16 @@ let Results = ({ articles, loading }) => {
     );
   }
   return ( results );
+}
+
+Results.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    snippet: PropTypes.string.isRequired,
+    alreadySaved: PropTypes.bool.isRequired,
+    web_url: PropTypes.string.isRequired
+  })),
+  loading: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = state => ({

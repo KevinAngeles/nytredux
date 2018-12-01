@@ -6,6 +6,7 @@ import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 import isInclusivelyAfterDay from 'react-dates/src/utils/isInclusivelyAfterDay';
 import { validateAndFetchArticles, setKeyword, setBeginDate, setEndDate, setBeginDateFocus, setEndDateFocus } from '../../actions/index';
+import PropTypes from 'prop-types';
 
 moment.locale('en');
 const displayFormatDate = 'MM/DD/YYYY';
@@ -84,6 +85,36 @@ class Search extends Component {
 			</div>
 		);
 	}
+}
+
+Search.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    snippet: PropTypes.string.isRequired,
+    alreadySaved: PropTypes.bool.isRequired,
+    web_url: PropTypes.string.isRequired,
+  })),
+  savedArticles: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
+  keyWord: PropTypes.string.isRequired,
+  beginDate: PropTypes.object.isRequired,
+  isBeginDateFocused: PropTypes.bool.isRequired,
+  endDate: PropTypes.object.isRequired,
+  isEndDateFocused: PropTypes.bool.isRequired,
+  inputErrors: PropTypes.shape({
+    keyWord: PropTypes.shape({
+      msg: PropTypes.string.isRequired,
+      status: PropTypes.bool.isRequired,
+    }),
+    beginDate: PropTypes.shape({
+      msg: PropTypes.string.isRequired,
+      status: PropTypes.bool.isRequired,
+    }),
+    endDate: PropTypes.shape({
+      msg: PropTypes.string.isRequired,
+      status: PropTypes.bool.isRequired,
+    }),
+  })
 }
 
 const mapStateToProps = state => ({
