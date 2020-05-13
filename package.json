@@ -1,54 +1,62 @@
 {
-	"name": "nytredux",
-	"version": "1.0.2",
-	"description": "This application allows users to search for articles from the New York Times and save the links into a data base so users can read those articles later.",
-	"main": "server.js",
-	"scripts": {
-		"start": "node ./bin/www",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "webpack -w",
-		"postinstall": "npx webpack"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/KevinAngeles/nytredux.git"
-	},
-	"bugs": {
-		"url": "https://github.com/KevinAngeles/nytredux/issues"
-	},
-	"homepage": "https://github.com/KevinAngeles/nytredux#readme",
-	"author": "Kevin Angeles",
-	"license": "ISC",
-	"dependencies": {
-		"@babel/polyfill": "^7.0.0",
-		"axios": "^0.18.0",
-		"body-parser": "^1.18.3",
-		"express": "^4.16.4",
-		"moment": "^2.22.2",
-		"mongoose": "^5.3.14",
-		"morgan": "^1.9.1",
-		"react": "^16.6.3",
-		"react-dates": "^18.2.2",
-		"react-dom": "^16.6.3",
-		"react-redux": "^5.1.1",
-		"redux": "^4.0.1",
-		"redux-logger": "^3.0.6",
-		"redux-thunk": "^2.3.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.1.6",
-		"@babel/preset-env": "^7.1.6",
-		"@babel/preset-react": "^7.0.0",
-		"@babel/register": "^7.0.0",
-		"babel-loader": "^8.0.4",
-		"css-loader": "^1.0.1",
-		"html-loader": "^0.5.5",
-		"html-webpack-plugin": "^3.2.0",
-		"mini-css-extract-plugin": "^0.4.4",
-		"node-sass": "^4.10.0",
-		"sass-loader": "^7.1.0",
-		"style-loader": "^0.23.1",
-		"webpack": "^4.26.1",
-		"webpack-cli": "^3.1.2"
-	}
+  "name": "nytredux",
+  "version": "1.1.0",
+  "description": "This application allows users to search for articles from the New York Times and save the links into a data base so users can read those articles later.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "devserver": "webpack-dev-server --open --mode development",
+    "build": "npx webpack --mode production",
+    "watch": "npx webpack --watch",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinAngeles/nytredux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KevinAngeles/nytredux/issues"
+  },
+  "homepage": "https://github.com/KevinAngeles/nytredux#readme",
+  "author": "Kevin Angeles",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.25.3",
+    "moment-timezone": "^0.5.28",
+    "mongoose": "^5.9.13",
+    "morgan": "^1.10.0",
+    "react": "^16.13.1",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/register": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
 }

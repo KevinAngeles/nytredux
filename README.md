@@ -1,4 +1,5 @@
 # New York Times Redux Search
+
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 This application allows users to search for articles from the New York Times and save the links into a data base so users can read those articles later.
@@ -17,14 +18,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 You are required to have installed the following software:
 
-* Node.js and NPM
-* MongoDB
+- Node.js and NPM
+- MongoDB
 
 ### Installing
 
 **Install dependencies**
 
 Go to the root of the project and run the following code:
+
 ```
 npm install
 ```
@@ -40,18 +42,29 @@ app.set('port', process.env.PORT || 3000);
 
 and change `3000` for the desired port.
 
+**Set New York Times API Key**
+
+Set the variable API_KEY with a valid New York Times API Key. For instance, you can go to the root of the project and create the file '.env' with the following code:
+
+```
+API_KEY=REPLACE_YOUR_API_KEY_HERE
+```
+
 **Change MongoDB URI**
 
 Go to the root of the project and open 'server.js' in a text editor.
 Then look for the line:
+
 ```
 let dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/nytredux';
 ```
 
 and change
+
 ```
 "mongodb://localhost/nytredux"
 ```
+
 for the desired MongoDB URI.
 
 ## Deployment
@@ -79,16 +92,16 @@ npm run start
 
 ## Built With
 
-* [Express](http://expressjs.com/) - Node.js framework used
-* [React](https://reactjs.org/) - JavaScript Library for building interfaces
-* [Redux](https://redux.js.org/) - Predictable state container for JavaScript apps
-* [Webpack](https://webpack.github.io/) - Module bundler
-* [MongoDB](https://www.mongodb.com/) - NOSQL data base used
-* [Mongoose](http://mongoosejs.com/) - MongoDB object modeling for node.js
+- [Express](http://expressjs.com/) - Node.js framework used
+- [React](https://reactjs.org/) - JavaScript Library for building interfaces
+- [Redux](https://redux.js.org/) - Predictable state container for JavaScript apps
+- [Webpack](https://webpack.github.io/) - Module bundler
+- [MongoDB](https://www.mongodb.com/) - NOSQL data base used
+- [Mongoose](http://mongoosejs.com/) - MongoDB object modeling for node.js
 
 ## Authors
 
-* **Kevin Angeles** - [nytredux](https://github.com/KevinAngeles/nytredux)
+- **Kevin Angeles** - [nytredux](https://github.com/KevinAngeles/nytredux)
 
 ## License
 
